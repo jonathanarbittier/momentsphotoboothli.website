@@ -35,13 +35,18 @@
 .desktop-photo-strip .strip-id{left:24%;bottom:-18px}
 
 @media(max-width:800px){
+  html,body{overscroll-behavior-x:none}
+  .mobile-viewfinder{contain:layout paint;isolation:isolate}
+  .mobile-viewfinder img{transform:translateZ(0);backface-visibility:hidden}
+  .mobile-viewfinder:after{display:none}
+  .mobile-hero-panel{contain:layout paint}
   .event-selector{display:block;padding:60px var(--pad) 76px}
   .event-selector h2{margin-bottom:24px}
   .negative-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;overflow:visible;margin:0;padding:0}
   .negative-tabs button{width:100%;min-width:0;min-height:50px;padding:8px 10px;white-space:normal;line-height:1.2;text-align:center}
   .negative-tabs button:last-child{grid-column:1/-1}
-  .celebration-preview{display:block;position:relative;margin:24px 0 0;aspect-ratio:4/3;background:var(--stone);border:8px solid var(--white);overflow:hidden;box-shadow:0 12px 32px rgba(23,21,18,.1)}
-  .celebration-preview img{object-position:center center;transition:opacity .16s ease}
+  .celebration-preview{display:block;position:relative;margin:24px 0 0;aspect-ratio:4/3;background:var(--stone);border:8px solid var(--white);overflow:hidden;box-shadow:none;contain:layout paint;isolation:isolate}
+  .celebration-preview img{object-position:center center;transition:opacity .16s ease;transform:translateZ(0);backface-visibility:hidden}
   .celebration-preview.is-changing img{opacity:.15}
   .celebration-preview figcaption{position:absolute;left:12px;right:12px;bottom:12px;display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--white);padding:10px 12px}
   .celebration-preview figcaption span{font-size:7px;letter-spacing:.16em;color:var(--gold)}
@@ -79,7 +84,7 @@
   .ticket{width:100%;min-width:0;min-height:330px;height:auto;scroll-snap-align:unset}
   .site-header{background:var(--ivory);-webkit-backdrop-filter:none;backdrop-filter:none}
   .process-image{filter:none}
-  .sticky-book{left:auto;width:min(210px,calc(100vw - 24px));padding:0 16px;transform:translate3d(0,90px,0);backface-visibility:hidden;contain:layout paint}
+  .sticky-book{left:auto;width:min(210px,calc(100vw - 24px));padding:0 16px;transform:translate3d(0,90px,0);backface-visibility:hidden;contain:layout paint;box-shadow:none;transition-duration:.18s}
   .sticky-book.visible{transform:translate3d(0,0,0)}
 }
 

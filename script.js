@@ -66,17 +66,13 @@ $$('.mobile-menu a').forEach(link => link.addEventListener('click', () => {
   mobileMenu.classList.remove('open');
 }));
 
-const mobileHero = $('#mobile-hero-image');
 const celebrationPreview = $('.celebration-preview');
 const previewImage = $('.celebration-preview img');
 const previewLabel = $('.celebration-preview strong');
 const desktopFrames = $$('.desktop-photo-strip .strip-frame');
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const mobileViewport = matchMedia('(max-width: 800px)');
 let celebrationTimer;
-
-Object.values(content.eventTypes).forEach(event => {
-  [event.primary, ...event.frames.map(frame => frame[0])].forEach(src => { const image = new Image(); image.src = src; });
-});
 
 $$('.negative-tabs button').forEach((tab, index, tabs) => {
   tab.tabIndex = index === 0 ? 0 : -1;
@@ -87,27 +83,27 @@ $$('.negative-tabs button').forEach((tab, index, tabs) => {
     tab.setAttribute('aria-selected', 'true');
     tab.tabIndex = 0;
     celebrationPreview.setAttribute('aria-labelledby', tab.id);
-    celebrationPreview.classList.add('is-changing');
-    $('.desktop-photo-strip').classList.add('is-changing');
+    const mobile = mobileViewport.matches;
+    (mobile ? celebrationPreview : desktopStrip).classList.add('is-changing');
     const delay = reduceMotion ? 0 : 110;
     celebrationTimer = setTimeout(() => {
-      previewImage.src = event.primary;
-      previewImage.alt = event.frames[1][1];
-      previewImage.style.objectPosition = event.position;
-      previewLabel.textContent = event.name;
-      mobileHero.src = event.primary;
-      mobileHero.alt = event.frames[1][1];
-      mobileHero.style.objectPosition = event.position;
-      desktopFrames.forEach((frame, frameIndex) => {
-        const [src, alt, caption] = event.frames[frameIndex];
-        const image = $('img', frame);
-        image.src = src;
-        image.alt = alt;
-        image.style.objectPosition = frameIndex === 1 ? event.position : 'center center';
-        $('figcaption', frame).textContent = caption;
-      });
-      celebrationPreview.classList.remove('is-changing');
-      $('.desktop-photo-strip').classList.remove('is-changing');
+      if (mobile) {
+        previewImage.src = event.primary;
+        previewImage.alt = event.frames[1][1];
+        previewImage.style.objectPosition = event.position;
+        previewLabel.textContent = event.name;
+        celebrationPreview.classList.remove('is-changing');
+      } else {
+        desktopFrames.forEach((frame, frameIndex) => {
+          const [src, alt, caption] = event.frames[frameIndex];
+          const image = $('img', frame);
+          image.src = src;
+          image.alt = alt;
+          image.style.objectPosition = frameIndex === 1 ? event.position : 'center center';
+          $('figcaption', frame).textContent = caption;
+        });
+        desktopStrip.classList.remove('is-changing');
+      }
     }, delay);
   });
   tab.addEventListener('keydown', event => {
@@ -161,7 +157,6 @@ $$('.process-strip article').forEach(item => processObserver.observe(item));
 const stickyBook = $('.sticky-book');
 const hero = $('.hero');
 const booking = $('.booking');
-const mobileViewport = matchMedia('(max-width: 800px)');
 let heroPassed = false;
 let formNear = false;
 const updateSticky = () => stickyBook.classList.toggle('visible', mobileViewport.matches && heroPassed && !formNear);
@@ -178,7 +173,10 @@ const bookingObserver = new IntersectionObserver(([entry]) => {
 
 heroObserver.observe(hero);
 bookingObserver.observe(booking);
-mobileViewport.addEventListener('change', updateSticky);
+mobileViewport.addEventListener('change', () => {
+  updateSticky();
+  $('.negative-tabs button[aria-selected="true"]')?.click();
+});
 updateSticky();
 
 const form = $('.inquiry-form');
