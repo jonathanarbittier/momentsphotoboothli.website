@@ -6,43 +6,43 @@ const content = {
   locations: ['Long Island', 'New York City', 'Tampa'],
   eventTypes: {
     weddings: {
-      name: 'Weddings', primary: 'public/images/wedding-party.jpg', position: 'center center',
+      name: 'Weddings', primary: '/images/wedding-party.jpg', position: 'center center',
       frames: [
-        ['public/images/sweet-sixteen.jpg', 'Friends celebrating a wedding in the photo booth', 'WEDDING · FRAME 01'],
-        ['public/images/wedding-party.jpg', 'Wedding guests laughing with colorful photo booth props', 'WEDDING · LONG ISLAND'],
-        ['public/images/keychain-keepsake.jpg', 'A personalized wedding photo keepsake', 'WEDDING · KEEPSAKE']
+        ['/images/sweet-sixteen.jpg', 'Friends celebrating a wedding in the photo booth', 'WEDDING · FRAME 01'],
+        ['/images/wedding-party.jpg', 'Wedding guests laughing with colorful photo booth props', 'WEDDING · LONG ISLAND'],
+        ['/images/keychain-keepsake.jpg', 'A personalized wedding photo keepsake', 'WEDDING · KEEPSAKE']
       ]
     },
     sweet16: {
-      name: 'Sweet 16s', primary: 'public/images/sweet-sixteen.jpg', position: 'center 42%',
+      name: 'Sweet 16s', primary: '/images/sweet-sixteen.jpg', position: 'center 42%',
       frames: [
-        ['public/images/wedding-party.jpg', 'Friends enjoying a Sweet 16 photo booth', 'SWEET 16 · FRAME 01'],
-        ['public/images/sweet-sixteen.jpg', 'Three friends celebrating a Sweet 16', 'SWEET 16 · LONG ISLAND'],
-        ['public/images/keychain-keepsake.jpg', 'A personalized Sweet 16 keepsake', 'SWEET 16 · KEEPSAKE']
+        ['/images/wedding-party.jpg', 'Friends enjoying a Sweet 16 photo booth', 'SWEET 16 · FRAME 01'],
+        ['/images/sweet-sixteen.jpg', 'Three friends celebrating a Sweet 16', 'SWEET 16 · LONG ISLAND'],
+        ['/images/keychain-keepsake.jpg', 'A personalized Sweet 16 keepsake', 'SWEET 16 · KEEPSAKE']
       ]
     },
     corporate: {
-      name: 'Corporate', primary: 'public/images/corporate-party.jpg', position: 'center center',
+      name: 'Corporate', primary: '/images/corporate-party.jpg', position: 'center center',
       frames: [
-        ['public/images/keychain-keepsake.jpg', 'A personalized event keepsake', 'CORPORATE · KEEPSAKE'],
-        ['public/images/corporate-party.jpg', 'Coworkers enjoying a black and gold photo booth', 'CORPORATE · NYC'],
-        ['public/images/wedding-party.jpg', 'Guests enjoying a professional event booth', 'CORPORATE · FRAME 03']
+        ['/images/keychain-keepsake.jpg', 'A personalized event keepsake', 'CORPORATE · KEEPSAKE'],
+        ['/images/corporate-party.jpg', 'Coworkers enjoying a black and gold photo booth', 'CORPORATE · NYC'],
+        ['/images/wedding-party.jpg', 'Guests enjoying a professional event booth', 'CORPORATE · FRAME 03']
       ]
     },
     birthdays: {
-      name: 'Birthdays', primary: 'public/images/keychain-keepsake.jpg', position: 'center center',
+      name: 'Birthdays', primary: '/images/keychain-keepsake.jpg', position: 'center center',
       frames: [
-        ['public/images/wedding-party.jpg', 'Birthday guests posing with colorful props', 'BIRTHDAY · FRAME 01'],
-        ['public/images/keychain-keepsake.jpg', 'A personalized birthday photo keepsake', 'BIRTHDAY · TAMPA'],
-        ['public/images/sweet-sixteen.jpg', 'Friends celebrating a birthday together', 'BIRTHDAY · FRAME 03']
+        ['/images/wedding-party.jpg', 'Birthday guests posing with colorful props', 'BIRTHDAY · FRAME 01'],
+        ['/images/keychain-keepsake.jpg', 'A personalized birthday photo keepsake', 'BIRTHDAY · TAMPA'],
+        ['/images/sweet-sixteen.jpg', 'Friends celebrating a birthday together', 'BIRTHDAY · FRAME 03']
       ]
     },
     quinceaneras: {
-      name: 'Quinceañeras', primary: 'public/images/sweet-sixteen.jpg', position: 'center 18%',
+      name: 'Quinceañeras', primary: '/images/sweet-sixteen.jpg', position: 'center 18%',
       frames: [
-        ['public/images/corporate-party.jpg', 'Guests dressed for an elegant quinceañera celebration', 'QUINCEAÑERA · FRAME 01'],
-        ['public/images/sweet-sixteen.jpg', 'Friends celebrating together at a quinceañera', 'QUINCEAÑERA · LONG ISLAND'],
-        ['public/images/keychain-keepsake.jpg', 'A personalized quinceañera photo keepsake', 'QUINCEAÑERA · KEEPSAKE']
+        ['/images/corporate-party.jpg', 'Guests dressed for an elegant quinceañera celebration', 'QUINCEAÑERA · FRAME 01'],
+        ['/images/sweet-sixteen.jpg', 'Friends celebrating together at a quinceañera', 'QUINCEAÑERA · LONG ISLAND'],
+        ['/images/keychain-keepsake.jpg', 'A personalized quinceañera photo keepsake', 'QUINCEAÑERA · KEEPSAKE']
       ]
     }
   }
