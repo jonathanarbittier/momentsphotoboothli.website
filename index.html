@@ -158,7 +158,7 @@
         <form class="inquiry-form" novalidate>
           <div class="field"><label for="name">Name *</label><input id="name" name="name" autocomplete="name" required /><span class="error"></span></div>
           <div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" autocomplete="email" required /><span class="error"></span></div>
-          <div class="field"><label for="phone">Phone *</label><input id="phone" name="phone" type="tel" autocomplete="tel" required pattern=".{7,}" /><span class="error"></span></div>
+          <div class="field"><label for="phone">Phone *</label><input id="phone" name="phone" type="tel" autocomplete="tel" required pattern="[0-9\(\) +.\-]{7,}" /><span class="error"></span></div>
           <div class="field"><label for="date">Event date *</label><input id="date" name="date" type="date" required /><span class="error"></span></div>
           <div class="field"><label for="location">Event location *</label><input id="location" name="location" autocomplete="address-level2" required placeholder="City or venue" /><span class="error"></span></div>
           <div class="field"><label for="type">Event type *</label><select id="type" name="type" required><option value="">Select one</option><option>Wedding</option><option>Sweet 16</option><option>Quinceañera</option><option>Birthday</option><option>Corporate event</option><option>Graduation</option><option>Private party</option></select><span class="error"></span></div>
