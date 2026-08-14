@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#F6F1E7" />
+    <meta name="description" content="Modern photo booth, 360 video booth, and personalized keychain experiences for weddings, parties, corporate events, and celebrations." />
+    <title>Moments Photo Booth LI | Photo Booth Rentals in Long Island, NYC &amp; Tampa</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%23171512'/%3E%3Cpath d='M10 17h8l2-4h8l2 4h8v20H10z' fill='none' stroke='%23fffdfc' stroke-width='2'/%3E%3Ccircle cx='24' cy='27' r='7' fill='none' stroke='%23b69555' stroke-width='2'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="flash" aria-hidden="true"></div>
+
+    <header class="site-header" id="top">
+      <a class="brand" href="#top" aria-label="Moments Photo Booth LI home">
+        <svg viewBox="0 0 42 34" aria-hidden="true"><path d="M4 9h8l2.6-4h12.8L30 9h8a3 3 0 0 1 3 3v16a3 3 0 0 1-3 3H4a3 3 0 0 1-3-3V12a3 3 0 0 1 3-3Z"/><circle cx="21" cy="20" r="7"/><circle cx="35" cy="13" r="1.5"/></svg>
+        <span><strong>Moments</strong><small>PHOTO BOOTH LI</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#experiences">Experiences</a><a href="#gallery">Gallery</a><a href="#process">How it works</a><a href="#areas">Service areas</a>
+      </nav>
+      <a class="button button-dark header-cta" href="#book">Check Your Date</a>
+      <a class="mobile-header-cta" href="#book">Check date</a>
+      <button class="menu-trigger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span></button>
+      <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+        <a href="#experiences">Experiences</a><a href="#gallery">Gallery</a><a href="#process">How it works</a><a href="#areas">Service areas</a><a href="#book">Check your date</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> Long Island · NYC · Tampa</p>
+          <h1 id="hero-title">Your favorite part<br />of the party <em>starts here.</em></h1>
+          <p class="hero-intro">Modern photo booth experiences, 360 videos, and personalized keepsakes for celebrations across Long Island, NYC, and Tampa.</p>
+          <div class="actions"><a class="button button-dark" href="#book">Check Your Date</a><a class="text-link" href="#experiences">Explore the booths <span>↘</span></a></div>
+        </div>
+
+        <div class="desktop-photo-strip" aria-label="Recent celebration moments" aria-live="polite">
+          <figure class="strip-frame side frame-left"><img src="public/images/sweet-sixteen.jpg" alt="Friends celebrating a wedding in the photo booth" /><figcaption>WEDDING · FRAME 01</figcaption></figure>
+          <figure class="strip-frame main-frame"><img id="hero-main-image" src="public/images/wedding-party.jpg" alt="Wedding guests laughing with colorful photo booth props" /><figcaption id="hero-caption">WEDDING · LONG ISLAND</figcaption></figure>
+          <figure class="strip-frame side frame-right"><img src="public/images/keychain-keepsake.jpg" alt="A personalized wedding photo keepsake" /><figcaption>WEDDING · KEEPSAKE</figcaption></figure>
+          <span class="strip-id">MOMENTS / 001</span>
+        </div>
+
+        <div class="mobile-viewfinder">
+          <img id="mobile-hero-image" src="public/images/wedding-party.jpg" alt="Wedding guests enjoying the photo booth" />
+          <span class="focus f1"></span><span class="focus f2"></span><span class="focus f3"></span><span class="focus f4"></span>
+          <span class="recording"><i></i> LIVE MOMENT</span><span class="exposure">1/125 &nbsp; F4.0</span>
+        </div>
+        <div class="mobile-hero-panel">
+          <p class="eyebrow"><span></span> Long Island · NYC · Tampa</p>
+          <h1>Your favorite part of the party <em>starts here.</em></h1>
+          <p>Photo booths, 360 videos &amp; keepsakes made for the moment.</p>
+          <a class="button button-dark" href="#book">Check Your Date</a>
+        </div>
+      </section>
+
+      <section class="event-selector" aria-labelledby="event-selector-title">
+        <div><p class="section-kicker">01 / FIND YOUR FRAME</p><h2 id="event-selector-title">What are we celebrating?</h2></div>
+        <div class="negative-tabs" role="tablist" aria-label="Event types">
+          <button id="tab-weddings" role="tab" aria-selected="true" aria-controls="celebration-preview" data-event="weddings">Weddings</button>
+          <button id="tab-sweet16" role="tab" aria-selected="false" aria-controls="celebration-preview" data-event="sweet16">Sweet 16s</button>
+          <button id="tab-corporate" role="tab" aria-selected="false" aria-controls="celebration-preview" data-event="corporate">Corporate</button>
+          <button id="tab-birthdays" role="tab" aria-selected="false" aria-controls="celebration-preview" data-event="birthdays">Birthdays</button>
+          <button id="tab-quinceaneras" role="tab" aria-selected="false" aria-controls="celebration-preview" data-event="quinceaneras">Quinceañeras</button>
+        </div>
+        <figure class="celebration-preview" id="celebration-preview" role="tabpanel" aria-labelledby="tab-weddings">
+          <img src="public/images/wedding-party.jpg" alt="Wedding guests laughing together in the photo booth" />
+          <figcaption><span>NOW IN FRAME</span><strong>Weddings</strong></figcaption>
+        </figure>
+      </section>
+
+      <section class="experiences" id="experiences" aria-labelledby="experiences-title">
+        <div class="section-heading"><p class="section-kicker">02 / PICK YOUR EXPERIENCE</p><h2 id="experiences-title">Three ways to make<br /><em>the room light up.</em></h2><p>Every setup is hosted, polished, and designed around your celebration.</p></div>
+
+        <article class="service service-booth">
+          <div class="booth-machine">
+            <span class="booth-light"></span><span class="booth-screen"><img src="public/images/wedding-party.jpg" alt="Guests visible on a modern photo booth screen" /></span><span class="booth-slot"></span>
+            <div class="printed-strip"><img src="public/images/sweet-sixteen.jpg" alt="Sample printed photo strip" /><img src="public/images/wedding-party.jpg" alt="Sample printed photo strip" /><img src="public/images/corporate-party.jpg" alt="Sample printed photo strip" /></div>
+          </div>
+          <div class="service-copy"><span>01</span><h3>Modern<br />Photo Booth</h3><p>Studio-quality portraits, instant sharing, custom templates, and a host who keeps the energy moving.</p><a class="text-link" href="#book">Build your booth <span>↗</span></a></div>
+        </article>
+
+        <article class="service service-360">
+          <div class="orbit" id="orbit" tabindex="0" aria-label="Interactive 360 booth preview. Drag left or right to rotate.">
+            <div class="orbit-center"><span>360°</span><small>VIDEO BOOTH</small></div>
+            <figure class="orbit-photo o1"><img src="public/images/wedding-party.jpg" alt="Guests in a 360 video booth" /></figure>
+            <figure class="orbit-photo o2"><img src="public/images/sweet-sixteen.jpg" alt="Friends posing for a 360 video" /></figure>
+            <figure class="orbit-photo o3"><img src="public/images/corporate-party.jpg" alt="Corporate guests using a 360 booth" /></figure>
+          </div>
+          <div class="service-copy light"><span>02</span><h3>Make it move.</h3><p>Slow-motion, high-energy 360 videos made to share before the party is over.</p><a class="text-link" href="#book">Spin with us <span>↗</span></a></div>
+        </article>
+
+        <article class="service service-keychain">
+          <div class="keepsake-tray" aria-hidden="true"><span class="tray-label">MADE AT YOUR EVENT</span><div class="keychain kc-one"><img src="public/images/keychain-keepsake.jpg" alt="" /></div><div class="keychain kc-two"><img src="public/images/sweet-sixteen.jpg" alt="" /></div><div class="keychain kc-three"><img src="public/images/wedding-party.jpg" alt="" /></div></div>
+          <div class="service-copy"><span>03</span><h3>The Keychain<br />Station</h3><p>Choose a favorite frame and turn it into a personalized keepsake, right at the party.</p><a class="text-link" href="#keychains">See the keepsakes <span>↘</span></a></div>
+        </article>
+      </section>
+
+      <section class="process" id="process" aria-labelledby="process-title">
+        <div class="process-title"><p class="section-kicker">03 / FROM ARRIVAL TO KEEPSAKE</p><h2 id="process-title">We bring the booth.<br /><em>You bring the people.</em></h2></div>
+        <div class="process-strip">
+          <article><div class="process-image"><img src="public/images/corporate-party.jpg" alt="A finished black and gold booth backdrop" /></div><span>01</span><h3>We set the scene</h3><p>Your backdrop, props, lighting and attendant arrive ready.</p></article>
+          <i aria-hidden="true"></i>
+          <article><div class="process-image"><img src="public/images/wedding-party.jpg" alt="Guests stepping in to enjoy the booth" /></div><span>02</span><h3>Your guests step in</h3><p>A little direction, a lot of personality, and the shutter goes.</p></article>
+          <i aria-hidden="true"></i>
+          <article><div class="process-image"><img src="public/images/keychain-keepsake.jpg" alt="A printed booth photo and keychain keepsake" /></div><span>03</span><h3>Memories leave with them</h3><p>Prints, shareable moments, and keepsakes in hand.</p></article>
+        </div>
+      </section>
+
+      <section class="gallery" id="gallery" aria-labelledby="gallery-title">
+        <div class="gallery-heading"><p class="section-kicker">04 / THE GOOD PART</p><h2 id="gallery-title">Caught in<br /><em>the moment.</em></h2><p>Real energy, art-directed into a gallery that never takes itself too seriously.</p></div>
+        <button class="gallery-item g-wide" data-full="public/images/wedding-party.jpg" data-caption="Wedding · Long Island" aria-label="Open wedding photo from Long Island"><img src="public/images/wedding-party.jpg" alt="Wedding guests laughing together with props" loading="lazy" /><span>WEDDING · LONG ISLAND</span></button>
+        <button class="gallery-item g-tall" data-full="public/images/sweet-sixteen.jpg" data-caption="Sweet 16 · Long Island" aria-label="Open Sweet 16 photo from Long Island"><img src="public/images/sweet-sixteen.jpg" alt="Three friends celebrating a Sweet 16" loading="lazy" /><span>SWEET 16 · LONG ISLAND</span></button>
+        <button class="gallery-item g-circle" data-full="public/images/corporate-party.jpg" data-caption="Corporate · NYC" aria-label="Open corporate event photo from New York City"><img src="public/images/corporate-party.jpg" alt="Coworkers laughing at a photo booth" loading="lazy" /><span>CORPORATE · NYC</span></button>
+        <button class="gallery-item g-small" data-full="public/images/keychain-keepsake.jpg" data-caption="Keepsake station · Tampa" aria-label="Open keychain station photo from Tampa"><img src="public/images/keychain-keepsake.jpg" alt="Personalized photo keychain and printed strip" loading="lazy" /><span>KEEPSAKE STATION · TAMPA</span></button>
+      </section>
+
+      <section class="keychain-feature" id="keychains" aria-labelledby="keychain-title">
+        <div class="keychain-photo"><img src="public/images/keychain-keepsake.jpg" alt="Round personalized photo keychain resting on a photo strip" loading="lazy" /><span class="photo-point"></span></div>
+        <div class="gold-connector" aria-hidden="true"></div>
+        <div class="keychain-copy"><p class="section-kicker">05 / A MOMENT YOU CAN HOLD</p><h2 id="keychain-title">Take the<br /><em>moment home.</em></h2><p>Our keychain station turns a favorite booth photo into a personalized keepsake during your event.</p><small>Keychain station availability depends on your selected package.</small><a class="button button-outline" href="#book">Ask about keychains</a></div>
+      </section>
+
+      <section class="corporate" aria-labelledby="corporate-title">
+        <div class="corporate-photo"><img src="public/images/corporate-party.jpg" alt="Professional guests enjoying a black and gold event booth" loading="lazy" /><span>BRAND ACTIVATION / HOLIDAY PARTY / GALA</span></div>
+        <div class="corporate-copy"><p class="section-kicker">FOR THE TEAM</p><h2 id="corporate-title">Your brand,<br /><em>in the frame.</em></h2><p>Polished experiences for company parties, launches, galas, and everything worth gathering for.</p><ul><li>Custom photo templates</li><li>Branded backdrops</li><li>Professional attendants</li><li>Props &amp; printed keepsakes</li></ul><a class="button button-gold" href="#book">Plan a company event</a></div>
+      </section>
+
+      <section class="areas" id="areas" aria-labelledby="areas-title">
+        <div class="section-heading compact"><p class="section-kicker">06 / WHERE WE CELEBRATE</p><h2 id="areas-title">Three home bases.<br /><em>One good time.</em></h2></div>
+        <div class="tickets">
+          <article class="ticket"><span class="ticket-no">MOM / 001</span><h3>Long<br />Island</h3><p>Nassau &amp; Suffolk</p><div class="ticket-note">Our original home base, serving celebrations island-wide.</div><span class="barcode">|||| || | |||| |</span></article>
+          <article class="ticket dark-ticket"><span class="ticket-no">MOM / 002</span><h3>New York<br />City</h3><p>Five boroughs</p><div class="ticket-note">City rooftops, ballrooms, offices, and private venues.</div><span class="barcode">|| | |||| || | |</span></article>
+          <article class="ticket"><span class="ticket-no">MOM / 003</span><h3>Tampa</h3><p>Tampa Bay area</p><div class="ticket-note">Sunshine-state parties, corporate events, and weddings.</div><span class="barcode">|||| | || | ||||</span></article>
+        </div>
+      </section>
+
+      <section class="review" aria-labelledby="review-title">
+        <div class="photo-back">
+          <p class="placeholder-label">TESTIMONIAL PLACEHOLDER</p>
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <blockquote id="review-title">“Add a verified client review here to let the real experience speak for itself.”</blockquote>
+          <p class="review-source">— VERIFIED REVIEW TO BE ADDED</p>
+          <div class="stamp" aria-hidden="true">MOMENTS<br />PHOTO BOOTH<br />LI · NY · FL</div>
+        </div>
+      </section>
+
+      <section class="booking" id="book" aria-labelledby="booking-title">
+        <div class="booking-intro"><p class="section-kicker">FINAL FRAME</p><h2 id="booking-title">Ready to make<br />some <em>moments?</em></h2><p>Tell us what you’re celebrating. We’ll follow up with experience options for your date and location.</p><div class="booking-reel" aria-hidden="true"><img src="public/images/wedding-party.jpg" alt="" /><img src="public/images/sweet-sixteen.jpg" alt="" /><img src="public/images/corporate-party.jpg" alt="" /></div></div>
+        <form class="inquiry-form" novalidate>
+          <div class="field"><label for="name">Name *</label><input id="name" name="name" autocomplete="name" required /><span class="error"></span></div>
+          <div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" autocomplete="email" required /><span class="error"></span></div>
+          <div class="field"><label for="phone">Phone *</label><input id="phone" name="phone" type="tel" autocomplete="tel" required pattern="[0-9() +.-]{7,}" /><span class="error"></span></div>
+          <div class="field"><label for="date">Event date *</label><input id="date" name="date" type="date" required /><span class="error"></span></div>
+          <div class="field"><label for="location">Event location *</label><input id="location" name="location" autocomplete="address-level2" required placeholder="City or venue" /><span class="error"></span></div>
+          <div class="field"><label for="type">Event type *</label><select id="type" name="type" required><option value="">Select one</option><option>Wedding</option><option>Sweet 16</option><option>Quinceañera</option><option>Birthday</option><option>Corporate event</option><option>Graduation</option><option>Private party</option></select><span class="error"></span></div>
+          <div class="field"><label for="guests">Estimated guest count</label><input id="guests" name="guests" type="number" min="1" inputmode="numeric" placeholder="e.g. 120" /><span class="error"></span></div>
+          <div class="field"><label for="experience">Experience of interest *</label><select id="experience" name="experience" required><option value="">Select one</option><option>Modern Photo Booth</option><option>360 Video Booth</option><option>Keychain Station</option><option>Not sure yet</option></select><span class="error"></span></div>
+          <div class="field full"><label for="message">Tell us about the party</label><textarea id="message" name="message" rows="3" placeholder="The mood, venue, questions—anything helpful."></textarea><span class="error"></span></div>
+          <button class="button button-gold full" type="submit">Send My Inquiry <span>↗</span></button>
+          <div class="form-status full" role="status" aria-live="polite"></div>
+        </form>
+      </section>
+    </main>
+
+    <footer><a class="brand footer-brand" href="#top"><svg viewBox="0 0 42 34" aria-hidden="true"><path d="M4 9h8l2.6-4h12.8L30 9h8a3 3 0 0 1 3 3v16a3 3 0 0 1-3 3H4a3 3 0 0 1-3-3V12a3 3 0 0 1 3-3Z"/><circle cx="21" cy="20" r="7"/><circle cx="35" cy="13" r="1.5"/></svg><span><strong>Moments</strong><small>PHOTO BOOTH LI</small></span></a><p>Long Island · New York City · Tampa</p><div><a href="#experiences">Experiences</a><a href="#gallery">Gallery</a><a href="#book">Inquire</a></div><small>© <span id="year"></span> Moments Photo Booth LI. Concept website.</small></footer>
+
+    <a class="sticky-book" href="#book">Check Your Date <span>↗</span></a>
+
+    <dialog class="lightbox" aria-label="Gallery image viewer">
+      <button class="lightbox-close" type="button" aria-label="Close image">×</button>
+      <div class="shutter" aria-hidden="true"></div><img alt="" /><p></p>
+    </dialog>
+  </body>
+</html>
