@@ -51,6 +51,10 @@ window.momentsContent = content;
 
 const menuButton = $('.menu-trigger');
 const mobileMenu = $('.mobile-menu');
+const flashOverlay = $('.flash');
+flashOverlay?.addEventListener('animationend', () => flashOverlay.remove(), { once: true });
+setTimeout(() => flashOverlay?.remove(), 1200);
+
 menuButton?.addEventListener('click', () => {
   const open = menuButton.getAttribute('aria-expanded') === 'true';
   menuButton.setAttribute('aria-expanded', String(!open));
@@ -157,15 +161,25 @@ $$('.process-strip article').forEach(item => processObserver.observe(item));
 const stickyBook = $('.sticky-book');
 const hero = $('.hero');
 const booking = $('.booking');
-const setSticky = () => {
-  if (innerWidth > 800) return stickyBook.classList.remove('visible');
-  const heroPassed = hero.getBoundingClientRect().bottom < 20;
-  const formNear = booking.getBoundingClientRect().top < innerHeight * .85;
-  stickyBook.classList.toggle('visible', heroPassed && !formNear);
-};
-addEventListener('scroll', setSticky, { passive: true });
-addEventListener('resize', setSticky);
-setSticky();
+const mobileViewport = matchMedia('(max-width: 800px)');
+let heroPassed = false;
+let formNear = false;
+const updateSticky = () => stickyBook.classList.toggle('visible', mobileViewport.matches && heroPassed && !formNear);
+
+const heroObserver = new IntersectionObserver(([entry]) => {
+  heroPassed = !entry.isIntersecting && entry.boundingClientRect.bottom < 20;
+  updateSticky();
+}, { rootMargin: '-20px 0px 0px' });
+
+const bookingObserver = new IntersectionObserver(([entry]) => {
+  formNear = entry.isIntersecting || entry.boundingClientRect.top < 0;
+  updateSticky();
+}, { rootMargin: '0px 0px -15% 0px' });
+
+heroObserver.observe(hero);
+bookingObserver.observe(booking);
+mobileViewport.addEventListener('change', updateSticky);
+updateSticky();
 
 const form = $('.inquiry-form');
 const dateInput = $('#date');
